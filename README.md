@@ -4,11 +4,10 @@ Provides implementation of #inspect that is more readable and can be used in irb
 
 ## Usage
 
+**without** this gem:
+
 ```ruby
 Person = Struct.new :name, :age
-
-# Before
-# ======
 
 Date.new(1970, 1, 1).inspect
 # => #<Date: 1970-01-01 ((2440588j,0s,0n),+0s,2299161j)>
@@ -18,12 +17,15 @@ BigDecimal("3.14").inspect
 
 Person.new("John Doe", 20).inspect
 # => #<struct Person name=\"John Doe\", age=20>
+```
 
-# After
-# =====
+**with** this gem:
 
+```ruby
 # remember to put `require "value_inspect"` *after* e.g. `require "bigdecimal"`
 require "value_inspect"
+
+Person = Struct.new :name, :age
 
 Date.new(1970, 1, 1).inspect
 # => Date.new(1970, 1, 1)
