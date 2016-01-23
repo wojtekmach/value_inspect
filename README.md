@@ -1,6 +1,6 @@
 # ValueInspect
 
-Provides implementation of #inspect that is more readable and can be used in irb.
+Provides implementation of #inspect that is more readable and can be used in irb. Especially useful for BigDecimal#inspect.
 
 ## Usage
 
