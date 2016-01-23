@@ -22,7 +22,7 @@ Person.new("John Doe", 20).inspect
 # After
 # =====
 
-# remeber to put `require "value_inspect"` *after* e.g. `require "bigdecimal"`
+# remember to put `require "value_inspect"` *after* e.g. `require "bigdecimal"`
 require "value_inspect"
 
 Date.new(1970, 1, 1).inspect
