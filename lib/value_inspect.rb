@@ -1,5 +1,3 @@
-require "value_inspect/version"
-
 require "value_inspect/struct"
 require "value_inspect/bigdecimal" if defined? BigDecimal
 require "value_inspect/time"

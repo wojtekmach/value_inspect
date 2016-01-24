@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'value_inspect/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "value_inspect"
-  spec.version       = ValueInspect::VERSION
+  spec.version       = "0.1.2"
   spec.authors       = ["Wojtek Mach"]
   spec.email         = ["wojtek@wojtekmach.pl"]
 
