@@ -8,6 +8,6 @@ end
 
 class DateTime
   def inspect
-    "DateTime.new(%s, %s, %s)" % [year, month, day]
+    strftime("DateTime.new(%Y, %-m, %-d, %-H, %-M, %-S, \"%:z\")")
   end
 end

@@ -26,9 +26,9 @@ class ValueInspectTest < Minitest::Spec
   end
 
   it "supports DateTime" do
-    date = DateTime.new(1970, 1, 31)
-    date.inspect.must_equal "DateTime.new(1970, 1, 31)"
-    date.original_inspect.must_equal "#<DateTime: 1970-01-31T00:00:00+00:00 ((2440618j,0s,0n),+0s,2299161j)>"
+    date = DateTime.new(1970, 1, 31, 0, 0, 0, "+01:00")
+    date.inspect.must_equal "DateTime.new(1970, 1, 31, 0, 0, 0, \"+01:00\")"
+    date.original_inspect.must_equal "#<DateTime: 1970-01-31T00:00:00+01:00 ((2440617j,82800s,0n),+3600s,2299161j)>"
   end
 
   it "supports BigDecimal" do
