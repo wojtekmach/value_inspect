@@ -14,21 +14,21 @@ class ValueInspectTest < Minitest::Spec
   end
 
   it "supports Time" do
-    time = Time.new(1970, 1, 1, 1, 0, 0, "+01:00")
-    time.inspect.must_equal "Time.new(1970, 1, 1, 1, 0, 0, \"+01:00\")"
-    time.original_inspect.must_equal "1970-01-01 01:00:00 +0100"
+    time = Time.new(1970, 1, 31, 0, 0, 0, "+01:00")
+    time.inspect.must_equal "Time.new(1970, 1, 31, 0, 0, 0, \"+01:00\")"
+    time.original_inspect.must_equal "1970-01-31 00:00:00 +0100"
   end
 
   it "supports Date" do
-    date = Date.new(1970, 1, 1)
-    date.inspect.must_equal "Date.new(1970, 1, 1)"
-    date.original_inspect.must_equal "#<Date: 1970-01-01 ((2440588j,0s,0n),+0s,2299161j)>"
+    date = Date.new(1970, 1, 31)
+    date.inspect.must_equal "Date.new(1970, 1, 31)"
+    date.original_inspect.must_equal "#<Date: 1970-01-31 ((2440618j,0s,0n),+0s,2299161j)>"
   end
 
   it "supports DateTime" do
-    date = DateTime.new(1970, 1, 1)
-    date.inspect.must_equal "DateTime.new(1970, 1, 1)"
-    date.original_inspect.must_equal "#<DateTime: 1970-01-01T00:00:00+00:00 ((2440588j,0s,0n),+0s,2299161j)>"
+    date = DateTime.new(1970, 1, 31)
+    date.inspect.must_equal "DateTime.new(1970, 1, 31)"
+    date.original_inspect.must_equal "#<DateTime: 1970-01-31T00:00:00+00:00 ((2440618j,0s,0n),+0s,2299161j)>"
   end
 
   it "supports BigDecimal" do
