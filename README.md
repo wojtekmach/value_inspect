@@ -43,11 +43,14 @@ Date.new(1970, 1, 1).original_inspect
 
 ## Supported classes
 
+* `Dir`
+* `File`
 * `Struct`
 * `Time`
+* `BigDecimal`
 * `Date`
 * `DateTime`
-* `BigDecimal`
+* `Pathname`
 * [`Value`](https://github.com/tcrayford/Values)
 
 ## Installation
