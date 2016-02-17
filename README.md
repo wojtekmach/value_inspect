@@ -43,14 +43,20 @@ Date.new(1970, 1, 1).original_inspect
 
 ## Supported classes
 
+Core:
+* "basic" classes like `Integer`, `String`, `Array` etc "just work"
 * `Dir`
 * `File`
 * `Struct`
 * `Time`
+
+Standard library:
 * `BigDecimal`
 * `Date`
 * `DateTime`
 * `Pathname`
+
+Gems:
 * [`Value`](https://github.com/tcrayford/Values)
 
 ## Installation
