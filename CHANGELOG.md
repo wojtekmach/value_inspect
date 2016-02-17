@@ -1,6 +1,7 @@
 ## HEAD
 
 * Support Pathname
+* Support File
 
 ## 0.1.2
 

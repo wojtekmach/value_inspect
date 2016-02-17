@@ -8,6 +8,12 @@ Person = Struct.new :name, :age
 Post = Value.new :title
 
 class ValueInspectTest < Minitest::Spec
+  it "supports File" do
+    file = File.new("/etc/passwd")
+    file.inspect.must_equal "File.new(\"/etc/passwd\")"
+    file.original_inspect.must_equal "#<File:/etc/passwd>"
+  end
+
   it "supports Struct" do
     john = Person.new("John Doe", 20)
     john.inspect.must_equal "Person.new(\"John Doe\", 20)"
