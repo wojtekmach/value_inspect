@@ -26,6 +26,12 @@ class ValueInspectTest < Minitest::Spec
     time.original_inspect.must_equal "1970-01-31 00:00:00 +0100"
   end
 
+  it "supports BigDecimal" do
+    pi = BigDecimal("3.14")
+    pi.inspect.must_equal "BigDecimal(\"3.14\")"
+    pi.original_inspect.must_match /#<BigDecimal:(.{12}),'0.314E1',18\(18\)>/
+  end
+
   it "supports Date" do
     date = Date.new(1970, 1, 31)
     date.inspect.must_equal "Date.new(1970, 1, 31)"
@@ -36,12 +42,6 @@ class ValueInspectTest < Minitest::Spec
     date = DateTime.new(1970, 1, 31, 0, 0, 0, "+01:00")
     date.inspect.must_equal "DateTime.new(1970, 1, 31, 0, 0, 0, \"+01:00\")"
     date.original_inspect.must_equal "#<DateTime: 1970-01-31T00:00:00+01:00 ((2440617j,82800s,0n),+3600s,2299161j)>"
-  end
-
-  it "supports BigDecimal" do
-    pi = BigDecimal("3.14")
-    pi.inspect.must_equal "BigDecimal(\"3.14\")"
-    pi.original_inspect.must_match /#<BigDecimal:(.{12}),'0.314E1',18\(18\)>/
   end
 
   it "supports Pathname" do
