@@ -1,6 +1,7 @@
 require "bigdecimal"
-require "values"
 require "date"
+require "pathname"
+require "values"
 require "test_helper"
 
 Person = Struct.new :name, :age
@@ -35,6 +36,12 @@ class ValueInspectTest < Minitest::Spec
     pi = BigDecimal("3.14")
     pi.inspect.must_equal "BigDecimal(\"3.14\")"
     pi.original_inspect.must_match /#<BigDecimal:(.{12}),'0.314E1',18\(18\)>/
+  end
+
+  it "supports Pathname" do
+    path = Pathname("/etc/passwd")
+    path.inspect.must_equal "Pathname(\"/etc/passwd\")"
+    path.original_inspect.must_equal "#<Pathname:/etc/passwd>"
   end
 
   it "supports Value" do

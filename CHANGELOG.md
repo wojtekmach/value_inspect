@@ -1,5 +1,7 @@
 ## HEAD
 
+* Support Pathname
+
 ## 0.1.2
 
 * Fix for DateTime
