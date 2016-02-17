@@ -1,5 +1,7 @@
 ## HEAD
 
+## 0.2.0
+
 * Support Pathname
 * Support File
 * Support Dir
