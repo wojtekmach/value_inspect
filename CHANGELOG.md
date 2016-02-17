@@ -2,6 +2,7 @@
 
 * Support Pathname
 * Support File
+* Support Dir
 
 ## 0.1.2
 

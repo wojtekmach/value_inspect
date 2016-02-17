@@ -1,3 +1,4 @@
+require "value_inspect/dir"
 require "value_inspect/file"
 require "value_inspect/struct"
 require "value_inspect/time"
